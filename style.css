@@ -1,0 +1,51 @@
+@import url('styles/game.css');
+@import url('styles/modals.css');
+
+:root{
+    --main-blue: #002032;
+    --light-blue: #2caef4;
+    --gray: #646565;
+    --white: #fefefe;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Rethink Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%
+}
+
+header{ order: 2; }
+
+section{ order: 1; }
+
+footer{ display: none; }
+
+@media screen and (max-width: 600px)  {
+    body{
+        flex-direction: column;
+    }
+
+    header{ order: 1; }
+
+    section{ order: 2; }   
+    
+    footer{
+        order: 3;
+        display: block;
+    }
+
+    footer p{
+        font-size: 0.8rem;
+        color: var(--main-blue)
+    }
+}
+
